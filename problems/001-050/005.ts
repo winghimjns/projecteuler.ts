@@ -31,7 +31,7 @@ const targetDownOne = target - 1;
 const productBase = target * targetDownOne;
 const targetHalf = target >> 1;
 
-function solution (): number {
+export default function solution (): number {
     outer: for (let i = 2;; i += 2) {
         const attempt = productBase * i;
         for (let j = targetDownOne - 1; j > targetHalf; j--) {
@@ -40,5 +40,3 @@ function solution (): number {
         return attempt;
     }
 }
-
-console.log(solution());

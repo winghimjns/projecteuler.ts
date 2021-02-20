@@ -22,8 +22,6 @@ function sequenceSum (num: number): number {
 	return (num + last) * count / 2;
 }
 
-function solution (): number {
+export default function solution (): number {
 	return sequenceSum(3) + sequenceSum(5) - sequenceSum(15);
 }
-
-console.log(solution());

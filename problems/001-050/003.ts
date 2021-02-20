@@ -29,9 +29,7 @@ function getFactors (num: number): List<number> {
     return smallFactors.concat(largeFactors);
 }
 
-function solution (): number {
+export default function solution (): number {
     const factors = getFactors(wtf);
     return factors.findLast((factor: number) => getFactors(factor).size === 0);
 }
-
-console.log(solution());

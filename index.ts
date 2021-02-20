@@ -3,7 +3,7 @@ if (!isNaN(problemNum) && problemNum >= 1 && problemNum < 1000) {
 	const startNum = problemNum - (problemNum % 50) + 1;
 	const endNum = startNum + 49;
 	const _ = num => ("000" + num).substr(-3); // Leading Zeros
-	require(`./problems/${_(startNum)}-${_(endNum)}/${_(problemNum)}`);	
+	console.log(require(`./problems/${_(startNum)}-${_(endNum)}/${_(problemNum)}`).default());
 } else {
 	console.log("¯\\_(ツ)_/¯");
 }

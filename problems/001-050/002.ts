@@ -25,7 +25,7 @@ function fibonacciRace ([last, current]: TwoNumbers): TwoNumbers {
 	return [current, next];
 }
 
-function solution (): number {
+export default function solution (): number {
 	let [last, current] = [1, 2];
 	let odds = List<number>([2]);
 	for (;;) {
@@ -35,5 +35,3 @@ function solution (): number {
 	}
 	return odds.update<number>(list => list.reduce((sum, curr) => sum + curr, 0));
 }
-
-console.log(solution());
